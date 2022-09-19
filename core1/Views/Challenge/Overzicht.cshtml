@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<table class="table table-dark table-striped table-hover">
+    <thead>
+        <tr>
+            <th>ChallengeId</th>
+            <th>ChallengeName</th>
+            <th>ChallengeDescription</th>
+            <th>NumberOfPlayers</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            foreach (Challenge challenge in ViewBag.challenges)
+            {
+                <tr>
+                    <td>
+                        @challenge.ChallengeId
+                    </td>
+                    <td>
+                        @challenge.ChallengeName
+                    </td>
+                    <td>
+                        @challenge.ChallengeDescription
+                    </td>
+                    <td>
+                        @challenge.NumberOfPlayers
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+﻿@model core1.Models.User
+@{
+    ViewData["Title"] = "Create Account";
+}
+<link rel="stylesheet" href="~/css/SignUp.css" />
+<h1 style="text-align:center">Create a New Account</h1>
+<hr />
+<div class="V-Line"></div>
+
+<form asp-action="SignUpPost" method="post" class="SignUp-Input">
+    <div class="UserName-Input">
+        <label style="font-size:118%;">Username:</label>
+        <input asp-for="UserName" type="text" class="User-input" required />
+    </div>
+    <br />
+    <div class="Email-Input">
+        <label style="font-size:120%;">Email:   </label>
+        <input asp-for="Email" type="email" class="Email-input" required />
+    </div>
+    <br />
+    <div class="Password-Input">
+        <label style="font-size:120%;">Password:</label>
+        <input asp-for="Password" type="password" class="Password" required />
+    </div>
+
+    <div class="Button">
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+    </div>
+</form>
